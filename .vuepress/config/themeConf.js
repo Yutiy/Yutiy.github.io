@@ -36,7 +36,7 @@ module.exports = {
             { text: 'JavaScript深入系列', link: '/js_deep/prototype_chains/' },
             { text: 'JavaScript专题系列', link: '/js_topic/func_debounce/' },
             { text: 'ES6', link: '/es6/' },
-            { text: 'Typescript', link: '/typescript/' },
+            { text: 'Typescript', link: '/ts/' },
             { text: 'Regexp', link: '/regexp/group/' },
           ]
         },

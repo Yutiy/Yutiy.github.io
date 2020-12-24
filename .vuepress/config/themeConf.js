@@ -3,8 +3,9 @@ const sidebar = require('./sidebar')
 module.exports = {
   // 要部署的仓库名字
   base: '/',
-  repo: 'Yutiy',
+  repo: 'https://github.com/Yutiy/Yutiy.github.io',
   navbar: true,
+  docsBranch: 'docs',
   editLinks: true,
   editLinkText: "在 GitHub 上编辑此页",
   lastUpdated: '更新于',
@@ -30,6 +31,7 @@ module.exports = {
       items: [
         { text: 'HTML', link: '/html/defer_async/' },
         { text: 'CSS', link: '/css/clear_float/' },
+        { text: '性能优化', link: '/performance/' },
         {
           text: '前端基础',
           items: [
@@ -37,7 +39,6 @@ module.exports = {
             { text: 'JavaScript专题系列', link: '/js_topic/func_debounce/' },
             { text: 'ES6', link: '/es6/' },
             { text: 'Typescript', link: '/ts/' },
-            { text: 'Regexp', link: '/regexp/group/' },
           ]
         },
         {
@@ -46,7 +47,6 @@ module.exports = {
             { text: 'Vue', link: '/vue/responsive/' },
             { text: 'React', link: '/react/hooks/' },
             { text: '小程序', link: '/miniprogram/' },
-            { text: 'Flutter', link: '/flutter/dart' },
           ]
         },
         {
@@ -60,27 +60,6 @@ module.exports = {
       ]
     },
     {
-      text: '服务端',
-      items: [
-        {
-          text: '操作语言',
-          items: [
-            { text: 'Node', link: '/node/event_loop/' },
-            { text: 'Nginx', link: '/nginx/' },
-            { text: 'Linux', link: '/linux/command/' },
-          ]
-        },
-        {
-          text: '数据库',
-          items: [
-            { text: 'Mysql', link: '/mysql/what_is_database/' },
-            { text: 'MongoDB', link: '/mongodb/' },
-            { text: 'Redis', link: '/redis/' },
-          ]
-        }
-      ]
-    },
-    {
       text: '网络基础',
       items: [
         { text: 'TCP协议', link: '/tcp/' },
@@ -88,23 +67,18 @@ module.exports = {
         { text: '前端安全', link: '/secure/xss/' },
       ]
     },
-    { text: '面试', link: '/interview/' },
-    { text: '算法', link: 'http://algo.ytxcloud.com' },
     {
-      text: '其他',
+      text: '自动化测试',
       items: [
-        { text: '性能优化', link: '/performance/' },
-        {
-          text: '自动化测试',
-          items: [
-            { text: 'PM2', link: '/pm2/' },
-            { text: 'Jest', link: '/jest/' },
-            { text: 'Jenkins', link: '/jenkins/' },
-            { text: 'Gitlab', link: '/gitlab/' },
-          ]
-        },
-      ],
+        { text: 'PM2', link: '/pm2/' },
+        { text: 'Jest', link: '/jest/' },
+        { text: 'Jenkins', link: '/jenkins/' },
+        { text: 'Gitlab', link: '/gitlab/' },
+      ]
     },
+    { text: '面试', link: '/interview/' },
+    { text: '算法', link: 'http://leetcode.ytxcloud.com' },
+    { text: '其他', link: 'http://other.ytxcloud.com' },
     { text: '关于我', link: '/about/' },
   ]
 }

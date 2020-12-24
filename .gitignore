@@ -5,7 +5,6 @@ package-lock.json
 # vuepress
 .vuepress/config/sidebar.js
 private.md
-.travis.yml
 
 # other
 .DS_Store

@@ -1,0 +1,14 @@
+language: node_js
+sudo: required
+node_js:
+  - lts/*
+cache: yarn
+install:
+  - yarn
+script:
+  - ./deploy.sh
+branches:
+  only:
+    - docs
+notifications:
+  email: false

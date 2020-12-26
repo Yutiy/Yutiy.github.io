@@ -60,11 +60,24 @@ module.exports = {
       ]
     },
     {
-      text: '网络基础',
+      text: '服务端',
       items: [
-        { text: 'TCP协议', link: '/tcp/' },
-        { text: 'HTTP协议', link: '/http/' },
-        { text: '前端安全', link: '/secure/xss/' },
+        {
+          text: '语言',
+          items: [
+            { text: 'Linux', link: '/linux/command/' },
+            { text: 'Nginx', link: '/nginx/' },
+            { text: 'Node', link: '/node/event_loop/' },
+          ]
+        },
+        {
+          text: '数据库',
+          items: [
+            { text: 'MySQL', link: '/mysql/what_is_database/' },
+            { text: 'MongoDB', link: '/mongodb/' },
+            { text: 'Redis', link: '/redis/' }
+          ]
+        }
       ]
     },
     {
@@ -78,7 +91,7 @@ module.exports = {
     },
     { text: '面试', link: '/interview/' },
     { text: '算法', link: 'http://leetcode.ytxcloud.com' },
-    { text: '其他', link: 'http://other.ytxcloud.com' },
+    { text: '编程基础', link: 'http://basic.ytxcloud.com' },
     { text: '关于我', link: '/about/' },
   ]
 }

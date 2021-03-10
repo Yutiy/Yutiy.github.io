@@ -5,6 +5,7 @@ package-lock.json
 # vuepress
 .vuepress/config/sidebar.js
 private.md
+interview.js
 
 # other
 .DS_Store

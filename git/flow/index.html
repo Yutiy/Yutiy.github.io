@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git flow最佳实践 | Yutiy&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <meta name="description" content="Learn Web Development Together">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#4b8bf5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="preload" href="/assets/css/0.styles.d4fa5b3b.css" as="style"><link rel="preload" href="/assets/js/app.4348bc4c.js" as="script"><link rel="preload" href="/assets/js/3.dfd25a97.js" as="script"><link rel="preload" href="/assets/js/1.6cccf194.js" as="script"><link rel="preload" href="/assets/js/15.ddd8c204.js" as="script"><link rel="preload" href="/assets/js/12.b1c4b11c.js" as="script"><link rel="prefetch" href="/assets/js/10.2b6018fc.js"><link rel="prefetch" href="/assets/js/100.32792c74.js"><link rel="prefetch" href="/assets/js/101.420a4bf4.js"><link rel="prefetch" href="/assets/js/102.b2548bd0.js"><link rel="prefetch" href="/assets/js/103.19b8b907.js"><link rel="prefetch" href="/assets/js/104.908e06de.js"><link rel="prefetch" href="/assets/js/105.62198f1d.js"><link rel="prefetch" href="/assets/js/106.5d338de7.js"><link rel="prefetch" href="/assets/js/107.f07671b8.js"><link rel="prefetch" href="/assets/js/108.7dc964ad.js"><link rel="prefetch" href="/assets/js/109.7fdfe6f6.js"><link rel="prefetch" href="/assets/js/11.5cf8dd28.js"><link rel="prefetch" href="/assets/js/110.4ec622e1.js"><link rel="prefetch" href="/assets/js/111.ea291722.js"><link rel="prefetch" href="/assets/js/112.e131e7dc.js"><link rel="prefetch" href="/assets/js/113.7d5116b2.js"><link rel="prefetch" href="/assets/js/114.f8ce63a4.js"><link rel="prefetch" href="/assets/js/115.9f3a6426.js"><link rel="prefetch" href="/assets/js/116.b23f6466.js"><link rel="prefetch" href="/assets/js/117.3a9292a7.js"><link rel="prefetch" href="/assets/js/118.46248e9c.js"><link rel="prefetch" href="/assets/js/119.7bbb799c.js"><link rel="prefetch" href="/assets/js/120.0c2e8339.js"><link rel="prefetch" href="/assets/js/121.144ac319.js"><link rel="prefetch" href="/assets/js/122.91c61103.js"><link rel="prefetch" href="/assets/js/13.c92905ad.js"><link rel="prefetch" href="/assets/js/14.728761c7.js"><link rel="prefetch" href="/assets/js/16.91f11a3c.js"><link rel="prefetch" href="/assets/js/17.66f21227.js"><link rel="prefetch" href="/assets/js/18.ba44ab56.js"><link rel="prefetch" href="/assets/js/19.af672dce.js"><link rel="prefetch" href="/assets/js/20.39d78c34.js"><link rel="prefetch" href="/assets/js/21.6fff1001.js"><link rel="prefetch" href="/assets/js/22.058434aa.js"><link rel="prefetch" href="/assets/js/23.24eeb27c.js"><link rel="prefetch" href="/assets/js/24.31168c58.js"><link rel="prefetch" href="/assets/js/25.e45a8537.js"><link rel="prefetch" href="/assets/js/26.5fd73495.js"><link rel="prefetch" href="/assets/js/27.d9797991.js"><link rel="prefetch" href="/assets/js/28.41e7277e.js"><link rel="prefetch" href="/assets/js/29.9ffe78c0.js"><link rel="prefetch" href="/assets/js/30.69b2895d.js"><link rel="prefetch" href="/assets/js/31.389df4ff.js"><link rel="prefetch" href="/assets/js/32.7366680b.js"><link rel="prefetch" href="/assets/js/33.f4d03f60.js"><link rel="prefetch" href="/assets/js/34.1051e26e.js"><link rel="prefetch" href="/assets/js/35.9929be84.js"><link rel="prefetch" href="/assets/js/36.3ac5b27d.js"><link rel="prefetch" href="/assets/js/37.330b4ebb.js"><link rel="prefetch" href="/assets/js/38.ec48082f.js"><link rel="prefetch" href="/assets/js/39.0b438d5b.js"><link rel="prefetch" href="/assets/js/4.37a81d8c.js"><link rel="prefetch" href="/assets/js/40.3487b3fa.js"><link rel="prefetch" href="/assets/js/41.21c9f0d9.js"><link rel="prefetch" href="/assets/js/42.bd762713.js"><link rel="prefetch" href="/assets/js/43.56624b1a.js"><link rel="prefetch" href="/assets/js/44.07c4fd5e.js"><link rel="prefetch" href="/assets/js/45.35ffd2a9.js"><link rel="prefetch" href="/assets/js/46.ce94642b.js"><link rel="prefetch" href="/assets/js/47.a9f147db.js"><link rel="prefetch" href="/assets/js/48.1ea7a1be.js"><link rel="prefetch" href="/assets/js/49.5fe118ef.js"><link rel="prefetch" href="/assets/js/5.5a53d6e5.js"><link rel="prefetch" href="/assets/js/50.a9265363.js"><link rel="prefetch" href="/assets/js/51.1af2ce4b.js"><link rel="prefetch" href="/assets/js/52.05117867.js"><link rel="prefetch" href="/assets/js/53.3f6d98d6.js"><link rel="prefetch" href="/assets/js/54.a49758ff.js"><link rel="prefetch" href="/assets/js/55.7482818c.js"><link rel="prefetch" href="/assets/js/56.9bf7e357.js"><link rel="prefetch" href="/assets/js/57.f27e6f24.js"><link rel="prefetch" href="/assets/js/58.0f48d0ab.js"><link rel="prefetch" href="/assets/js/59.83d01be0.js"><link rel="prefetch" href="/assets/js/6.eba7e215.js"><link rel="prefetch" href="/assets/js/60.a659decf.js"><link rel="prefetch" href="/assets/js/61.ebf7b893.js"><link rel="prefetch" href="/assets/js/62.c73a7eed.js"><link rel="prefetch" href="/assets/js/63.787e2550.js"><link rel="prefetch" href="/assets/js/64.f6f75f76.js"><link rel="prefetch" href="/assets/js/65.4ee3fe18.js"><link rel="prefetch" href="/assets/js/66.acd91e69.js"><link rel="prefetch" href="/assets/js/67.ef9b2f2f.js"><link rel="prefetch" href="/assets/js/68.c57c9a45.js"><link rel="prefetch" href="/assets/js/69.39727afc.js"><link rel="prefetch" href="/assets/js/7.88a0b593.js"><link rel="prefetch" href="/assets/js/70.ed511691.js"><link rel="prefetch" href="/assets/js/71.d7ad36d7.js"><link rel="prefetch" href="/assets/js/72.0789b887.js"><link rel="prefetch" href="/assets/js/73.eaa7b79d.js"><link rel="prefetch" href="/assets/js/74.28c3877e.js"><link rel="prefetch" href="/assets/js/75.1d59ad04.js"><link rel="prefetch" href="/assets/js/76.15d6ab91.js"><link rel="prefetch" href="/assets/js/77.b9572d33.js"><link rel="prefetch" href="/assets/js/78.1637cecc.js"><link rel="prefetch" href="/assets/js/79.e7233923.js"><link rel="prefetch" href="/assets/js/8.0545c9b1.js"><link rel="prefetch" href="/assets/js/80.41eedf92.js"><link rel="prefetch" href="/assets/js/81.18e03fee.js"><link rel="prefetch" href="/assets/js/82.68ca1487.js"><link rel="prefetch" href="/assets/js/83.efebdfba.js"><link rel="prefetch" href="/assets/js/84.2fdcbdb4.js"><link rel="prefetch" href="/assets/js/85.a6d24e83.js"><link rel="prefetch" href="/assets/js/86.57f8094c.js"><link rel="prefetch" href="/assets/js/87.10feeb6c.js"><link rel="prefetch" href="/assets/js/88.3bc1bef2.js"><link rel="prefetch" href="/assets/js/89.363701f3.js"><link rel="prefetch" href="/assets/js/9.9f4ea044.js"><link rel="prefetch" href="/assets/js/90.4b1ac4e6.js"><link rel="prefetch" href="/assets/js/91.eb493d92.js"><link rel="prefetch" href="/assets/js/92.b6b56959.js"><link rel="prefetch" href="/assets/js/93.9e59f6b7.js"><link rel="prefetch" href="/assets/js/94.049c028d.js"><link rel="prefetch" href="/assets/js/95.5800fc0c.js"><link rel="prefetch" href="/assets/js/96.2538216b.js"><link rel="prefetch" href="/assets/js/97.02437a53.js"><link rel="prefetch" href="/assets/js/98.e25565cc.js"><link rel="prefetch" href="/assets/js/99.5461b8ad.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d4fa5b3b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>Yutiy's Blog</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>Learn Web Development Together</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yutiy's Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/defer_async/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/clear_float/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link"><i class="undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js_deep/prototype_chains/" class="nav-link"><i class="undefined"></i>
+  JavaScript深入系列
+</a></li><li class="dropdown-subitem"><a href="/js_topic/func_debounce/" class="nav-link"><i class="undefined"></i>
+  JavaScript专题系列
+</a></li><li class="dropdown-subitem"><a href="/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/ts/" class="nav-link"><i class="undefined"></i>
+  Typescript
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/responsive/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/react/hooks/" class="nav-link"><i class="undefined"></i>
+  React
+</a></li><li class="dropdown-subitem"><a href="/miniprogram/" class="nav-link"><i class="undefined"></i>
+  小程序
+</a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/" class="nav-link router-link-active"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-subitem"><a href="/webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      服务端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>语言</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/command/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/node/event_loop/" class="nav-link"><i class="undefined"></i>
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>数据库</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/what_is_database/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-subitem"><a href="/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      自动化测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pm2/" class="nav-link"><i class="undefined"></i>
+  PM2
+</a></li><li class="dropdown-item"><!----> <a href="/jest/" class="nav-link"><i class="undefined"></i>
+  Jest
+</a></li><li class="dropdown-item"><!----> <a href="/jenkins/" class="nav-link"><i class="undefined"></i>
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/gitlab/" class="nav-link"><i class="undefined"></i>
+  Gitlab
+</a></li></ul></div></div><div class="nav-item"><a href="/interview/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></div><div class="nav-item"><a href="http://leetcode.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  算法
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://basic.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  编程基础
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></div> <a href="https://github.com/Yutiy/Yutiy.github.io" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><!----> <!----> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>108</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>0</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/defer_async/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/clear_float/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link"><i class="undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js_deep/prototype_chains/" class="nav-link"><i class="undefined"></i>
+  JavaScript深入系列
+</a></li><li class="dropdown-subitem"><a href="/js_topic/func_debounce/" class="nav-link"><i class="undefined"></i>
+  JavaScript专题系列
+</a></li><li class="dropdown-subitem"><a href="/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/ts/" class="nav-link"><i class="undefined"></i>
+  Typescript
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/responsive/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/react/hooks/" class="nav-link"><i class="undefined"></i>
+  React
+</a></li><li class="dropdown-subitem"><a href="/miniprogram/" class="nav-link"><i class="undefined"></i>
+  小程序
+</a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/" class="nav-link router-link-active"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-subitem"><a href="/webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      服务端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>语言</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/command/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/node/event_loop/" class="nav-link"><i class="undefined"></i>
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>数据库</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/what_is_database/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-subitem"><a href="/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      自动化测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pm2/" class="nav-link"><i class="undefined"></i>
+  PM2
+</a></li><li class="dropdown-item"><!----> <a href="/jest/" class="nav-link"><i class="undefined"></i>
+  Jest
+</a></li><li class="dropdown-item"><!----> <a href="/jenkins/" class="nav-link"><i class="undefined"></i>
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/gitlab/" class="nav-link"><i class="undefined"></i>
+  Gitlab
+</a></li></ul></div></div><div class="nav-item"><a href="/interview/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></div><div class="nav-item"><a href="http://leetcode.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  算法
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://basic.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  编程基础
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></div> <a href="https://github.com/Yutiy/Yutiy.github.io" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/git/command/" class="sidebar-link">git常用命令</a></li><li><a href="/git/flow/" aria-current="page" class="active sidebar-link">git flow最佳实践</a></li><li><a href="/git/rebase/" class="sidebar-link">git rebase的使用</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Webpack</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/" class="sidebar-link">性能优化方案</a></li><li><a href="/webpack/loader/" class="sidebar-link">如何自定义loader</a></li><li><a href="/webpack/plugin/" class="sidebar-link">如何自定义plugin</a></li><li><a href="/webpack/dll/" class="sidebar-link">如何进行dll优化</a></li><li><a href="/webpack/hmr/" class="sidebar-link">热更新hmr原理</a></li><li><a href="/webpack/mini/" class="sidebar-link">实现webpack_mini</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Docker</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docker/" class="sidebar-link">Docker基础</a></li><li><a href="/docker/dockerfile/" class="sidebar-link">Dockerfile</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>git flow最佳实践</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <!---->
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">git flow最佳实践</h1> <div data-v-1ff7123e><!----> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>3/26/2020</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><p><img src="/assets/img/git-flow.f3ecc3cf.png" alt="git-flow"></p> <h2 id="主要分支"><a href="#主要分支" class="header-anchor">#</a> 主要分支</h2> <ul><li>origin/master: 源代码 HEAD 总是反应生产状态就绪的主要分支</li> <li>origin/develop: 源代码 HEAD 总是反映了下一版本中最新交付的开发更改的状态的主要分支。</li></ul> <p>当 <code>develop</code> 分支中的源代码到达稳定并准备释放时，应该将其合并到 <code>master</code> 分支上面并打上tag。</p> <h2 id="功能分支feature"><a href="#功能分支feature" class="header-anchor">#</a> 功能分支feature</h2> <p>功能分支通常仅存在于开发人员存储库中，而不存在于 <code>origin</code>, 一般从 <code>develop</code> 分支进行检出，但是必须合并回 <code>develop</code> 分支，功能分支命名约定为: <code>除了master、develop、release-*或者hotfix-*</code>。</p> <p>功能分支用于为即将发布或为将来版本开发的功能，其本质是只要功能处于开发阶段，其就会存在，但最终会被合并回 <code>develop</code> 分支或者被丢弃。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 创建功能分支</span>
+$ <span class="token function">git</span> checkout -b feature/test develop
+
+<span class="token comment"># 开发完成加入完成的功能</span>
+$ <span class="token function">git</span> checkout develop             <span class="token comment"># 切换到 develop 分支</span>
+$ <span class="token function">git</span> merge --no-ff feature/test   <span class="token comment"># 合并 feature/test 分支到 develop 分支</span>
+$ <span class="token function">git</span> branch -d feature/test       <span class="token comment"># 删除 feature/test 分支</span>
+$ <span class="token function">git</span> push origin develop          <span class="token comment"># 推送到远端 develop 分支</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p><code>--no-ff</code> 选项会使合并始终创建新的提交对象，即不使用 <code>fast-farword</code> 模式进行合并，这样可以避免丢失有关功能分支历史信息，并将添加的功能一并提交到远端。这样会创建一些空白的提交对象，但是收益会大于成本。</p> <p><img src="/assets/img/git_merge.72c63f30.jpg" alt="git-merge"></p> <h2 id="发布分支release"><a href="#发布分支release" class="header-anchor">#</a> 发布分支release</h2> <p>发布分支一般从 <code>develop</code> 分支检出，但是必须合并回<code>develop、master</code>分支，发布分支命名约定为: <code>release-*</code>。</p> <p>发布分支一般为生产版本做准备，可以允许修复一些小错误并为发布准备元数据(版本号、构建日期等)。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 创建发布分支</span>
+$ <span class="token function">git</span> checkout -b release-1.1 develop
+
+<span class="token comment"># 完成release，合并到master，并打标记</span>
+$ <span class="token function">git</span> checkout master
+$ <span class="token function">git</span> merge --no-ff release-1.1
+$ <span class="token function">git</span> tag -a v1.1
+$ <span class="token function">git</span> push --tags origin master
+
+<span class="token comment"># 完成release，合并到develop</span>
+$ <span class="token function">git</span> checkout develop
+$ <span class="token function">git</span> merge --no-ff release-1.1
+
+<span class="token comment"># 完成release，删除分支</span>
+$ <span class="token function">git</span> branch -d release-1.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="程序修补分支hotfix"><a href="#程序修补分支hotfix" class="header-anchor">#</a> 程序修补分支hotfix</h2> <p>补丁分支一般从 <code>master</code> 分支检出，但是必须合并回<code>develop、master</code>分支，发布分支命名约定为: <code>hotfix-*</code>。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 创建补丁分支</span>
+$ <span class="token function">git</span> checkout -b hotfix-0.1 master
+
+<span class="token comment"># 完成补丁，合并到master，并打标记</span>
+$ <span class="token function">git</span> checkout master
+$ <span class="token function">git</span> merge --no-ff hotfix-0.1
+$ <span class="token function">git</span> tag -a v1.2
+$ <span class="token function">git</span> push --tags origin master
+
+<span class="token comment"># 完成补丁，合并到develop</span>
+$ <span class="token function">git</span> checkout develop
+$ <span class="token function">git</span> merge --no-ff hotfix-0.1
+
+<span class="token comment"># 完成补丁，删除分支</span>
+$ <span class="token function">git</span> branch -d hotfix-0.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div></div></section> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Yutiy/Yutiy.github.io/edit/docs/docs/工具/1.Git/2.git flow最佳实践.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">更新于: </span> <span class="time">2020-09-27 02:26:06</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/git/command/" class="prev">
+            git常用命令
+          </a></span> <span class="next"><a href="/git/rebase/">
+            git rebase的使用
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/git/flow/#主要分支" class="sidebar-link reco-side-主要分支" data-v-70334359>主要分支</a></li><li class="level-2" data-v-70334359><a href="/git/flow/#功能分支feature" class="sidebar-link reco-side-功能分支feature" data-v-70334359>功能分支feature</a></li><li class="level-2" data-v-70334359><a href="/git/flow/#发布分支release" class="sidebar-link reco-side-发布分支release" data-v-70334359>发布分支release</a></li><li class="level-2" data-v-70334359><a href="/git/flow/#程序修补分支hotfix" class="sidebar-link reco-side-程序修补分支hotfix" data-v-70334359>程序修补分支hotfix</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Yutiy's Blog
+    </div> <div class="operation" style="right:90px;bottom:40px;display:none;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:none;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="position:fixed;right:40px;bottom:0px;opacity:0.9;z-index:99999;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----><div></div></div></div>
+    <script src="/assets/js/app.4348bc4c.js" defer></script><script src="/assets/js/3.dfd25a97.js" defer></script><script src="/assets/js/1.6cccf194.js" defer></script><script src="/assets/js/15.ddd8c204.js" defer></script><script src="/assets/js/12.b1c4b11c.js" defer></script>
+  </body>
+</html>

@@ -13,5 +13,4 @@ features:
   details: 了解服务端，才能更好编程。
 - title: offer之道
   details: 面试除了需要过硬的知识储备，技巧也是成功的关键。
-footer: Copyright © 2019 Yutiy | 粤ICP备19122381号
 ---

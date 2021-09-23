@@ -28,5 +28,5 @@ module.exports = {
 
   themeConfig: themeConf,
 
-  plugins: require('./plugins/')
+  plugins: require('./plugins/'),
 }

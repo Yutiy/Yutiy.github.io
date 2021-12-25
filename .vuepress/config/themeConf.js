@@ -54,7 +54,6 @@ module.exports = {
           items: [
             { text: 'Vue', link: '/vue/responsive/' },
             { text: 'React', link: '/react/hooks/' },
-            { text: '小程序', link: '/miniprogram/' },
           ]
         },
         {

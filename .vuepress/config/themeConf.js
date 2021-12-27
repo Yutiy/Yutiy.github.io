@@ -53,7 +53,7 @@ module.exports = {
           text: '框架',
           items: [
             { text: 'Vue', link: '/vue/responsive/' },
-            { text: 'React', link: '/react/hooks/' },
+            { text: 'React', link: '/react/performance/' },
           ]
         },
         {

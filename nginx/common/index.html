@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx常见配置 | Yutiy&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <meta name="description" content="Learn Web Development Together">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#4b8bf5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="preload" href="/assets/css/0.styles.d26f0bff.css" as="style"><link rel="preload" href="/assets/js/app.e6ada31a.js" as="script"><link rel="preload" href="/assets/js/3.bcce95c8.js" as="script"><link rel="preload" href="/assets/js/1.1ed5b30b.js" as="script"><link rel="preload" href="/assets/js/100.bbb5c099.js" as="script"><link rel="preload" href="/assets/js/13.aa46de1e.js" as="script"><link rel="prefetch" href="/assets/js/10.e703f7c3.js"><link rel="prefetch" href="/assets/js/101.3ec7079b.js"><link rel="prefetch" href="/assets/js/102.b1945d3c.js"><link rel="prefetch" href="/assets/js/103.d006df97.js"><link rel="prefetch" href="/assets/js/104.f39b2657.js"><link rel="prefetch" href="/assets/js/105.cb707423.js"><link rel="prefetch" href="/assets/js/106.081af2ef.js"><link rel="prefetch" href="/assets/js/107.4f239795.js"><link rel="prefetch" href="/assets/js/108.33d8caa0.js"><link rel="prefetch" href="/assets/js/109.efdb56b8.js"><link rel="prefetch" href="/assets/js/11.b912c2f2.js"><link rel="prefetch" href="/assets/js/110.d0af4c32.js"><link rel="prefetch" href="/assets/js/111.ea29a16e.js"><link rel="prefetch" href="/assets/js/112.a68546ea.js"><link rel="prefetch" href="/assets/js/113.e13b01ea.js"><link rel="prefetch" href="/assets/js/114.8f0a9173.js"><link rel="prefetch" href="/assets/js/115.bf051e17.js"><link rel="prefetch" href="/assets/js/116.dc995eaa.js"><link rel="prefetch" href="/assets/js/117.6e4d6c9f.js"><link rel="prefetch" href="/assets/js/118.0b6659c4.js"><link rel="prefetch" href="/assets/js/119.c24bd3d1.js"><link rel="prefetch" href="/assets/js/12.9fe044a6.js"><link rel="prefetch" href="/assets/js/120.8d9eef86.js"><link rel="prefetch" href="/assets/js/121.9a3ff87b.js"><link rel="prefetch" href="/assets/js/122.289dd7f6.js"><link rel="prefetch" href="/assets/js/123.7dff398c.js"><link rel="prefetch" href="/assets/js/124.cd17bfee.js"><link rel="prefetch" href="/assets/js/125.956eca25.js"><link rel="prefetch" href="/assets/js/126.4ef04088.js"><link rel="prefetch" href="/assets/js/14.9c5f100a.js"><link rel="prefetch" href="/assets/js/15.61823016.js"><link rel="prefetch" href="/assets/js/16.dbadb808.js"><link rel="prefetch" href="/assets/js/17.94c7d499.js"><link rel="prefetch" href="/assets/js/18.01a049b5.js"><link rel="prefetch" href="/assets/js/19.91d339ac.js"><link rel="prefetch" href="/assets/js/20.f937c605.js"><link rel="prefetch" href="/assets/js/21.0d8f9068.js"><link rel="prefetch" href="/assets/js/22.4a8115c5.js"><link rel="prefetch" href="/assets/js/23.7586f110.js"><link rel="prefetch" href="/assets/js/24.14df36fe.js"><link rel="prefetch" href="/assets/js/25.0a25f18a.js"><link rel="prefetch" href="/assets/js/26.4789e09b.js"><link rel="prefetch" href="/assets/js/27.c92468bc.js"><link rel="prefetch" href="/assets/js/28.afde8333.js"><link rel="prefetch" href="/assets/js/29.2bc129ba.js"><link rel="prefetch" href="/assets/js/30.122e467a.js"><link rel="prefetch" href="/assets/js/31.c2a43aac.js"><link rel="prefetch" href="/assets/js/32.bcc326ac.js"><link rel="prefetch" href="/assets/js/33.f40ad097.js"><link rel="prefetch" href="/assets/js/34.32fee993.js"><link rel="prefetch" href="/assets/js/35.a52b1baa.js"><link rel="prefetch" href="/assets/js/36.7de1411f.js"><link rel="prefetch" href="/assets/js/37.a4a84179.js"><link rel="prefetch" href="/assets/js/38.3f10c4a9.js"><link rel="prefetch" href="/assets/js/39.65b55f95.js"><link rel="prefetch" href="/assets/js/4.78c1a12c.js"><link rel="prefetch" href="/assets/js/40.5ea747e2.js"><link rel="prefetch" href="/assets/js/41.db6ff3cc.js"><link rel="prefetch" href="/assets/js/42.846eca28.js"><link rel="prefetch" href="/assets/js/43.f116421f.js"><link rel="prefetch" href="/assets/js/44.d8eace89.js"><link rel="prefetch" href="/assets/js/45.78220a86.js"><link rel="prefetch" href="/assets/js/46.6908d09c.js"><link rel="prefetch" href="/assets/js/47.dcc48633.js"><link rel="prefetch" href="/assets/js/48.a09d8952.js"><link rel="prefetch" href="/assets/js/49.b588182a.js"><link rel="prefetch" href="/assets/js/5.7b79d23b.js"><link rel="prefetch" href="/assets/js/50.0ed8299d.js"><link rel="prefetch" href="/assets/js/51.dc2019d7.js"><link rel="prefetch" href="/assets/js/52.c07787da.js"><link rel="prefetch" href="/assets/js/53.63e1145e.js"><link rel="prefetch" href="/assets/js/54.76ddde87.js"><link rel="prefetch" href="/assets/js/55.e1fb86a1.js"><link rel="prefetch" href="/assets/js/56.e160b33c.js"><link rel="prefetch" href="/assets/js/57.824f5070.js"><link rel="prefetch" href="/assets/js/58.111a7300.js"><link rel="prefetch" href="/assets/js/59.532377fa.js"><link rel="prefetch" href="/assets/js/6.b82575ea.js"><link rel="prefetch" href="/assets/js/60.4947ea50.js"><link rel="prefetch" href="/assets/js/61.f9fbba6e.js"><link rel="prefetch" href="/assets/js/62.5310cfc3.js"><link rel="prefetch" href="/assets/js/63.6e1c2083.js"><link rel="prefetch" href="/assets/js/64.0a02ca93.js"><link rel="prefetch" href="/assets/js/65.36b00c3c.js"><link rel="prefetch" href="/assets/js/66.383b4879.js"><link rel="prefetch" href="/assets/js/67.2d1da7f1.js"><link rel="prefetch" href="/assets/js/68.da9d41f8.js"><link rel="prefetch" href="/assets/js/69.8d34b0c4.js"><link rel="prefetch" href="/assets/js/7.0eb3d5c2.js"><link rel="prefetch" href="/assets/js/70.a3557535.js"><link rel="prefetch" href="/assets/js/71.4734c2b0.js"><link rel="prefetch" href="/assets/js/72.4b63b471.js"><link rel="prefetch" href="/assets/js/73.eb3eec43.js"><link rel="prefetch" href="/assets/js/74.bf79801b.js"><link rel="prefetch" href="/assets/js/75.5ff112c6.js"><link rel="prefetch" href="/assets/js/76.9b829b65.js"><link rel="prefetch" href="/assets/js/77.a8e6adf5.js"><link rel="prefetch" href="/assets/js/78.1655d94b.js"><link rel="prefetch" href="/assets/js/79.bd7081a0.js"><link rel="prefetch" href="/assets/js/8.48217c3a.js"><link rel="prefetch" href="/assets/js/80.289be372.js"><link rel="prefetch" href="/assets/js/81.0cc3dc56.js"><link rel="prefetch" href="/assets/js/82.9716ca87.js"><link rel="prefetch" href="/assets/js/83.4387009b.js"><link rel="prefetch" href="/assets/js/84.bdd29588.js"><link rel="prefetch" href="/assets/js/85.2dec5891.js"><link rel="prefetch" href="/assets/js/86.d2e6d9e1.js"><link rel="prefetch" href="/assets/js/87.45c18ff5.js"><link rel="prefetch" href="/assets/js/88.9a10777c.js"><link rel="prefetch" href="/assets/js/89.23376240.js"><link rel="prefetch" href="/assets/js/9.62cacfed.js"><link rel="prefetch" href="/assets/js/90.e0e349df.js"><link rel="prefetch" href="/assets/js/91.38d068b6.js"><link rel="prefetch" href="/assets/js/92.d25d33e3.js"><link rel="prefetch" href="/assets/js/93.8b071ca6.js"><link rel="prefetch" href="/assets/js/94.ea610a86.js"><link rel="prefetch" href="/assets/js/95.1b7730a0.js"><link rel="prefetch" href="/assets/js/96.643c58e6.js"><link rel="prefetch" href="/assets/js/97.ab560e90.js"><link rel="prefetch" href="/assets/js/98.8327a620.js"><link rel="prefetch" href="/assets/js/99.6b9cb3dc.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d26f0bff.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1aefc0b4><div data-v-1aefc0b4><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1aefc0b4 data-v-1aefc0b4><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>Yutiy's Blog</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>Learn Web Development Together</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <span data-v-25ba6db2>2020 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-1aefc0b4><header class="navbar" data-v-1aefc0b4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yutiy's Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/defer_async/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/clear_float/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link"><i class="undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js_deep/prototype_chains/" class="nav-link"><i class="undefined"></i>
+  JavaScript深入系列
+</a></li><li class="dropdown-subitem"><a href="/js_topic/func_debounce/" class="nav-link"><i class="undefined"></i>
+  JavaScript专题系列
+</a></li><li class="dropdown-subitem"><a href="/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/ts/" class="nav-link"><i class="undefined"></i>
+  Typescript
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/responsive/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/react/performance/" class="nav-link"><i class="undefined"></i>
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-subitem"><a href="/webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      服务端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>语言</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/command/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/nginx/" class="nav-link router-link-active"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/node/event_loop/" class="nav-link"><i class="undefined"></i>
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>数据库</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/what_is_database/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-subitem"><a href="/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      自动化测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pm2/" class="nav-link"><i class="undefined"></i>
+  PM2
+</a></li><li class="dropdown-item"><!----> <a href="/jest/" class="nav-link"><i class="undefined"></i>
+  Jest
+</a></li><li class="dropdown-item"><!----> <a href="/jenkins/" class="nav-link"><i class="undefined"></i>
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/gitlab/" class="nav-link"><i class="undefined"></i>
+  Gitlab
+</a></li></ul></div></div><div class="nav-item"><a href="/interview/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></div><div class="nav-item"><a href="http://leetcode.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  算法
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://basic.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  编程基础
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></div> <a href="https://github.com/Yutiy/Yutiy.github.io" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask" data-v-1aefc0b4></div> <aside class="sidebar" data-v-1aefc0b4><div class="personal-info-wrapper" data-v-39576ba9 data-v-1aefc0b4><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>112</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      大前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/html/defer_async/" class="nav-link"><i class="undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/css/clear_float/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link"><i class="undefined"></i>
+  性能优化
+</a></li><li class="dropdown-item"><h4>前端基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js_deep/prototype_chains/" class="nav-link"><i class="undefined"></i>
+  JavaScript深入系列
+</a></li><li class="dropdown-subitem"><a href="/js_topic/func_debounce/" class="nav-link"><i class="undefined"></i>
+  JavaScript专题系列
+</a></li><li class="dropdown-subitem"><a href="/es6/" class="nav-link"><i class="undefined"></i>
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/ts/" class="nav-link"><i class="undefined"></i>
+  Typescript
+</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/responsive/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/react/performance/" class="nav-link"><i class="undefined"></i>
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-subitem"><a href="/webpack/" class="nav-link"><i class="undefined"></i>
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      服务端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>语言</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/linux/command/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/nginx/" class="nav-link router-link-active"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/node/event_loop/" class="nav-link"><i class="undefined"></i>
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>数据库</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/mysql/what_is_database/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-subitem"><a href="/mongodb/" class="nav-link"><i class="undefined"></i>
+  MongoDB
+</a></li><li class="dropdown-subitem"><a href="/redis/" class="nav-link"><i class="undefined"></i>
+  Redis
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      自动化测试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pm2/" class="nav-link"><i class="undefined"></i>
+  PM2
+</a></li><li class="dropdown-item"><!----> <a href="/jest/" class="nav-link"><i class="undefined"></i>
+  Jest
+</a></li><li class="dropdown-item"><!----> <a href="/jenkins/" class="nav-link"><i class="undefined"></i>
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/gitlab/" class="nav-link"><i class="undefined"></i>
+  Gitlab
+</a></li></ul></div></div><div class="nav-item"><a href="/interview/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></div><div class="nav-item"><a href="http://leetcode.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  算法
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://basic.ytxcloud.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  编程基础
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></div> <a href="https://github.com/Yutiy/Yutiy.github.io" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/command/" class="sidebar-link">常见命令</a></li><li><a href="/linux/perm/" class="sidebar-link">用户、组和权限</a></li><li><a href="/linux/firewall/" class="sidebar-link">防火墙</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Nginx</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/nginx/" aria-current="page" class="sidebar-link">Nginx基础</a></li><li><a href="/nginx/basic/" class="sidebar-link">Nginx基本配置</a></li><li><a href="/nginx/common/" aria-current="page" class="active sidebar-link">Nginx常见配置</a></li><li><a href="/nginx/skill/" class="sidebar-link">Nginx配置技巧</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Node</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/node/event_loop/" class="sidebar-link">事件循环</a></li><li><a href="/node/process/" class="sidebar-link">线程与进程</a></li><li><a href="/node/module/" class="sidebar-link">模块机制</a></li><li><a href="/node/koa_mini/" class="sidebar-link">实现koa_mini</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-1aefc0b4><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>Nginx常见配置</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <span data-v-25ba6db2>2020 - </span>
+          2022
+        </a></span></div></div> <div data-v-1aefc0b4><main class="page"><section><div class="page-title"><h1 class="title">Nginx常见配置</h1> <div data-v-f875f3fc><!----> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>3/26/2020</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="子域名使用"><a href="#子域名使用" class="header-anchor">#</a> 子域名使用</h2> <p>首先购买域名后，需要配置主机的二级域名如 <code>blog.ytxcloud.com</code>，等待解析生效后，在 <code>/etc/nginx/conf.d</code> 目录下新建 <code>blog.conf</code>, 配置如下:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>server <span class="token punctuation">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+  server_name blog.ytxcloud.com<span class="token punctuation">;</span>
+
+  location / <span class="token punctuation">{</span>
+    root /usr/share/nginx/html/blog<span class="token punctuation">;</span>
+    index index.html<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="反向代理"><a href="#反向代理" class="header-anchor">#</a> 反向代理</h2> <p>反向代理是最常用的服务功能，常用来解决跨域问题，加入要定向到 <code>baidu.com</code> 的话可以配置如下:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>server <span class="token punctuation">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+  server_name api.ytxcloud.com<span class="token punctuation">;</span>
+
+  location ~ /search/ <span class="token punctuation">{</span>
+    proxy_pass https://www.baidu.com<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  location ~ /video/ <span class="token punctuation">{</span>
+    proxy_pass https://www.bilibili.com<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>反向代理还有一些其他的配置项，如下:</p> <ul><li><code>proxy_set_header</code>: 在将客户端请求发送给后端服务器之前，更改来自客户端的请求头信息</li> <li><code>proxy_connect_timeout</code>: 配置 Nginx 与后端代理服务器尝试建立连接的超时时间</li> <li><code>proxy_read_timeout</code>: 配置 Nginx 向后端服务器组发出read请求后，等待相应的超时时间</li> <li><code>proxy_send_timeout</code>: 配置 Nginx 向后端服务器组发出write请求后，等待相应的超时时间</li> <li><code>proxy_redirect</code>: 用于修改后端服务器返回的响应头中的 Location 和 Refresh</li></ul> <h2 id="负载均衡"><a href="#负载均衡" class="header-anchor">#</a> 负载均衡</h2> <p>负载均衡的主要思路就是把负载合理分配到各个服务器上，实现压力分流，基础配置如下:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>http <span class="token punctuation">{</span>
+  upstream myserver <span class="token punctuation">{</span>
+    server <span class="token number">127.0</span>.0.1:8080<span class="token punctuation">;</span>
+    server <span class="token number">127.0</span>.0.1:8081<span class="token punctuation">;</span>
+    server <span class="token number">127.0</span>.0.1:8082 <span class="token assign-left variable">weight</span><span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Nginx 提供了几种不同的分配方式，默认为<strong>轮询</strong>, 分配方式如下:</p> <ul><li>轮询: 默认方式，每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务挂了，能自动剔除</li> <li>weight: 权重分配，指定轮询几率，权重越高，在被访问的概率越大，用于后端服务器性能不均的情况</li> <li>ip_hash: 每个请求按访问 IP 的 hash 结果分配，这样每个访客固定访问一个后端服务器，可以解决动态网页 session 共享问题。负载均衡每次请求都会重新定位到服务器集群中的某一个，那么已经登录某一个服务器的用户再重新定位到另一个服务器，其登录信息将会丢失，这样显然是不妥的</li> <li>fair: 按后端服务器的响应时间分配，响应时间短的优先分配，需要安装第三方插件 <code>nginx-upstream-fair</code></li></ul> <h2 id="跨域cors配置"><a href="#跨域cors配置" class="header-anchor">#</a> 跨域CORS配置</h2> <h2 id="配置https"><a href="#配置https" class="header-anchor">#</a> 配置HTTPS</h2> <p>首先需要申请证书，完了之后将 <code>xxx.crt</code> 和 <code>xxx.key</code> 文件拷贝到服务器目录，在配置如下:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>server <span class="token punctuation">{</span>
+  listen <span class="token number">443</span> ssl http2 default_server<span class="token punctuation">;</span>
+  server_name ytxcloud.com<span class="token punctuation">;</span>
+
+  ssl_certificate /etc/nginx/https/1_ytxcloud.com_bundle.crt<span class="token punctuation">;</span>
+  ssl_certificate_key /etc/nginx/https/2_ytxcloud.com.key<span class="token punctuation">;</span>
+  ssl_session_timeout 10m<span class="token punctuation">;</span>
+
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2<span class="token punctuation">;</span>     <span class="token comment"># 请按照以下协议配置</span>
+  ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:<span class="token operator">!</span>aNULL:<span class="token operator">!</span>MD5:<span class="token operator">!</span>RC4:<span class="token operator">!</span>DHE<span class="token punctuation">;</span>
+  ssl_prefer_server_ciphers on<span class="token punctuation">;</span>
+
+  add_header X-Frame-Options DENY<span class="token punctuation">;</span>           <span class="token comment"># 减少点击劫持</span>
+  add_header X-Content-Type-Options nosniff<span class="token punctuation">;</span> <span class="token comment"># 禁止服务器自动解析资源类型</span>
+  add_header X-Xss-Protection <span class="token number">1</span><span class="token punctuation">;</span>             <span class="token comment"># 防XSS攻击</span>
+
+  location / <span class="token punctuation">{</span>
+    root /usr/share/nginx/html<span class="token punctuation">;</span>
+    index index.html index.htm<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>配置之后 <code>nginx -t -q</code> 检查一下，没问题就 <code>nginx -s reload</code> 重启一下，完了就可以访问 <code>https://ytxcloud.com</code> 网站了。</p> <h2 id="适配pc或移动设备"><a href="#适配pc或移动设备" class="header-anchor">#</a> 适配PC或移动设备</h2> <p>根据用户设备不同返回不同样式的站点，采用分开制作的方式，根据用户请求的 <code>user-agent</code> 来判断是返回 <code>PC</code> 还是 <code>H5</code> 站点。</p> <p>在 <code>/usr/share/nginx/html</code> 目录下新建两件文件夹 <code>PC</code> 和 <code>Mobile</code>，然后到 <code>/etc/nginx/conf.d</code> 目录新建 <code>adapt.conf</code>，配置如下:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>server <span class="token punctuation">{</span>
+  listen <span class="token number">80</span><span class="token punctuation">;</span>
+  server_name adapt.ytxcloud.com<span class="token punctuation">;</span>
+
+  location / <span class="token punctuation">{</span>
+    root /usr/share/nginx/html/PC<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$http_user_agent</span> ~* <span class="token string">'(Android|webOS|iPhone|iPod|BlackBerry)'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      root /usr/share/nginx/html/Mobile<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    index index.html index.htm<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>可以看出主要是多了一个 <code>$http_user_agent</code> 全局变量来判断用户请求的 <code>user_agent</code>，从而指定不同的 root，返回对应的站点。</p> <h2 id="开启gzip压缩"><a href="#开启gzip压缩" class="header-anchor">#</a> 开启gzip压缩</h2> <p>gzip是一种常见的网页压缩技术，传输的网页经过 gzip 压缩之后通常可以变成一半大小，更小的网页体积也就意味着带宽的节约和传输速度的提升。</p></div></section> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Yutiy/Yutiy.github.io/edit/docs/docs/服务端/Nginx/3.Nginx常见配置.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">更新于: </span> <span class="time">2022-01-11 09:56:25</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/nginx/basic/" class="prev">
+            Nginx基本配置
+          </a></span> <span class="next"><a href="/nginx/skill/">
+            Nginx配置技巧
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-cb1513f6><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#子域名使用" class="sidebar-link reco-side-子域名使用" data-v-cb1513f6>子域名使用</a></li><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#反向代理" class="sidebar-link reco-side-反向代理" data-v-cb1513f6>反向代理</a></li><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#负载均衡" class="sidebar-link reco-side-负载均衡" data-v-cb1513f6>负载均衡</a></li><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#跨域cors配置" class="sidebar-link reco-side-跨域cors配置" data-v-cb1513f6>跨域CORS配置</a></li><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#配置https" class="sidebar-link reco-side-配置https" data-v-cb1513f6>配置HTTPS</a></li><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#适配pc或移动设备" class="sidebar-link reco-side-适配pc或移动设备" data-v-cb1513f6>适配PC或移动设备</a></li><li class="level-2" data-v-cb1513f6><a href="/nginx/common/#开启gzip压缩" class="sidebar-link reco-side-开启gzip压缩" data-v-cb1513f6>开启gzip压缩</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Yutiy's Blog
+    </div> <div class="operation" style="right:90px;bottom:40px;display:none;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:none;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="position:fixed;right:40px;bottom:0px;opacity:0.9;z-index:99999;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----><div></div></div></div>
+    <script src="/assets/js/app.e6ada31a.js" defer></script><script src="/assets/js/3.bcce95c8.js" defer></script><script src="/assets/js/1.1ed5b30b.js" defer></script><script src="/assets/js/100.bbb5c099.js" defer></script><script src="/assets/js/13.aa46de1e.js" defer></script>
+  </body>
+</html>
